@@ -1,41 +1,76 @@
 
 function toggleFormVisibility(formName) {
-    switch (formName) {
-        case "recForm":
-            if (document.getElementById(formName).style.display === "none") {
-                document.getElementById(formName).style.display = "inline";
-            } else {
-                document.getElementById(formName).style.display = "none";
-            }
-            document.getElementById("circleForm").style.display = "none";
-            document.getElementById("triForm").style.display = "none";
-            break;
+    
+    document.getElementById("circleForm").style.display = "none";
+    document.getElementById("triFormArea").style.display = "none";
+    document.getElementById("triFormLength").style.display = "none";
+    document.getElementById("recForm").style.display = "none";
 
-        case "circleForm":
-            if (document.getElementById(formName).style.display === "none") {
-                document.getElementById(formName).style.display = "inline";
+    document.getElementById(formName).style.display = "inline";
+//    if (document.getElementById(formName).style.display === "none") {
+//        document.getElementById(formName).style.display = "inline";
+//    } else {
+//        document.getElementById(formName).style.display = "none";
+//    }
+            
+            
+//    switch (formName) {
+//        case "recForm":
+//            if (document.getElementById(formName).style.display === "none") {
+//                document.getElementById(formName).style.display = "inline";
+//            } else {
+//                document.getElementById(formName).style.display = "none";
+//            }
+//            document.getElementById("circleForm").style.display = "none";
+//            document.getElementById("triFormArea").style.display = "none";
+//            document.getElementById("triFormLength").style.display = "none";
+//            break;
+//
+//        case "circleForm":
+//            if (document.getElementById(formName).style.display === "none") {
+//                document.getElementById(formName).style.display = "inline";
+//
+//            } else {
+//                document.getElementById(formName).style.display = "none";
+//            }
+//            document.getElementById("recForm").style.display = "none";
+//            document.getElementById("triFormArea").style.display = "none";
+//            document.getElementById("triFormLength").style.display = "none";
+//            break;
+//
+//        case "triFormArea":
+//            if (document.getElementById(formName).style.display === "none") {
+//                document.getElementById(formName).style.display = "inline";
+//            } else {
+//                document.getElementById(formName).style.display = "none";
+//            }
+//            document.getElementById("recForm").style.display = "none";
+//            document.getElementById("circleForm").style.display = "none";
+//            document.getElementById("triFormLength").style.display = "none";
+//            break;
+//
+//        case "triFormLength":
+//            if (document.getElementById(formName).style.display === "none") {
+//                document.getElementById(formName).style.display = "inline";
+//            } else {
+//                document.getElementById(formName).style.display = "none";
+//            }
+//            document.getElementById("recForm").style.display = "none";
+//            document.getElementById("circleForm").style.display = "none";
+//            document.getElementById("triFormArea").style.display = "none";
+//
+//        default:
+//            document.getElementById("recForm").style.display = "none";
+//            document.getElementById("circleForm").style.display = "none";
+//            document.getElementById("triFormArea").style.display = "none";
+//    }
+}
 
-            } else {
-                document.getElementById(formName).style.display = "none";
-            }
-            document.getElementById("recForm").style.display = "none";
-            document.getElementById("triForm").style.display = "none";
-            break;
+function showmenu(elmnt){
+    document.getElementById(elmnt).style.visibility = "visible";
+}
 
-        case "triForm":
-            if (document.getElementById(formName).style.display === "none") {
-                document.getElementById(formName).style.display = "inline";
-            } else {
-                document.getElementById(formName).style.display = "none";
-            }
-            document.getElementById("recForm").style.display = "none";
-            document.getElementById("circleForm").style.display = "none";
-            break;
-
-        default:
-            document.getElementById("recForm").style.display = "none";
-            document.getElementById("circleForm").style.display = "none";
-            document.getElementById("triForm").style.display = "none";
-    }
+function hidemenu(elmnt){
+    document.getElementById(elmnt).style.visibility = "hidden";
 }
 

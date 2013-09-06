@@ -23,6 +23,14 @@ public class ShapeCalculator {
             case 2:
                 calc = new TriangleCalculator();
                 return calc.calcArea(parseValue(request.getParameter("base")), parseValue(request.getParameter("height")));
+            case 3:
+                calc = new TriangleCalculator();
+//                if(request.getParameter("sideC") == null || parseValue(request.getParameter("sideC")) == 0) {
+//                    return calc.calcHypotenuse(parseValue(request.getParameter("sideA")), parseValue(request.getParameter("sideC")));
+//                }
+                if(request.getParameter("sideC") == null || parseValue(request.getParameter("sideC")) == 0) {
+                    return calc.calcLegs(parseValue(request.getParameter("sideA")), parseValue(request.getParameter("sideB")));
+                }
             default:
                 return 0;
         }

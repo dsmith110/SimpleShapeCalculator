@@ -5,7 +5,11 @@
     Description:
         Purpose of the stylesheet follows.
 */
-
+.button {
+    color: whitesmoke;
+    background: #003366;
+    width: 100px;
+}
 div.one {
     position: absolute;
     left: 20px;
@@ -17,12 +21,39 @@ div.two {
     top: 100px;
 }
 
-h3 {
+.h3 {
     position: relative;
     left: 12px;
 }
 
 p.one {
     padding-left: 70px;
+}
+
+td.menu{
+    background: #99CC99;
+}
+
+table.menu {
+    text-align: left;
+    width: 130px;
+    font-size:80%;
+    position:fixed;
+    visibility:hidden;
+    left: 235px;
+    top: 80px;
+}
+
+.tab {
+    left: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #993300;
+}
+
+a:hover{
+    color:green;
 }
 
