@@ -26,8 +26,6 @@ public class ShapeCalculator {
             default:
                 return 0;
         }
-        
-        
     }
     
     public static double parseValue(String val) {

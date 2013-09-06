@@ -18,7 +18,11 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "CalculatorController", urlPatterns = {"/CalculatorController"})
 public class CalculatorController extends HttpServlet {
-
+    
+    private final String REQUEST_PAGE = "/CalculatedResults.jsp";
+    private final String CONTENT_TYPE = "text/html;charset=UTF-8";
+    private final String RESULT_STRING = "result";
+    
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -31,15 +35,15 @@ public class CalculatorController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType(CONTENT_TYPE);
         
         PrintWriter out = response.getWriter();
         
         double result = ShapeCalculator.calculate(request);
-        request.setAttribute("result", result);
+        request.setAttribute(RESULT_STRING, result);
 
         RequestDispatcher view =
-                request.getRequestDispatcher("/CalculatedResults.jsp");
+                request.getRequestDispatcher(REQUEST_PAGE);
         view.forward(request, response);
 
     }
