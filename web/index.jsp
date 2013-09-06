@@ -12,11 +12,10 @@
         <title>Simple Shape Calculator</title>
     </head>
     <body>
-        <form id="recForm" name="recForm" action="CalculatorController" method="POST">
-            <input type="text" id="length" placeholder="length"><br/>
-            <input type="text" id="width" placeholder="width"><br/>
+        <form id="recForm" name="recForm" action="CalculatorController" method="GET">
+            <input type="text" name="length" id="length" placeholder="length"><br/>
+            <input type="text" name="width" id="width" placeholder="width"><br/>
             <input type="Submit" value="Calculate">
-            
         </form>
     </body>
 </html>
