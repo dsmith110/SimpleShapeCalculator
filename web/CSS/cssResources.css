@@ -1,0 +1,19 @@
+/* 
+    Document   : cssResources
+    Created on : Sep 6, 2013, 11:46:16 AM
+    Author     : bit
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+div.one {
+    position: absolute;
+    left: 20px;
+}
+
+div.two {
+    position: absolute;
+    left: 20px;
+    top: 125px;
+}
+
