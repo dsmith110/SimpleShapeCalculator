@@ -10,13 +10,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Calculated Results</title>
+        <link rel="stylesheet" type="text/css" href="CSS/cssResources.css">
     </head>
     <body>
 
         <%
-            Object obj = request.getAttribute("area");
+            Object obj = request.getAttribute("result");
             double area = (Double)obj;
-            out.println(area);
+            out.println("<h3>Calculated Results</h3><br />");
+            out.println("<p class='one'>" + area + "</p>");
         %>
     </body>
 </html>

@@ -1,6 +1,8 @@
 package Controller;
 
-import Model.RectangleAreaCalculator;
+import Model.Calculator;
+import Model.RectangleCalculator;
+import Model.ShapeCalculator;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -32,18 +34,9 @@ public class CalculatorController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         PrintWriter out = response.getWriter();
-
-        RectangleAreaCalculator calc = new RectangleAreaCalculator();
         
-        String value = request.getParameter("length").trim();
-        double length = Double.parseDouble(value);
-        
-        value = request.getParameter("width").trim();
-        double width = Double.parseDouble(value);
-//        double area = calc.calcArea(5, 5);
-        double area = calc.calcArea(length, width);
-        
-        request.setAttribute("area", area);
+        double result = ShapeCalculator.calculate(request);
+        request.setAttribute("result", result);
 
         RequestDispatcher view =
                 request.getRequestDispatcher("/CalculatedResults.jsp");
