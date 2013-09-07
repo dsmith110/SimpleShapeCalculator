@@ -14,8 +14,9 @@
         <script type="text/javascript" src="javascript/jsResources.js"></script>
     </head>
     <body>
+        
         <h3 class="h3">Simple Shape Calculator</h3>
-
+        
         <table class="tab">
             <tr>
                 <td onmouseover="showmenu('rectangleMenu');" onmouseout="hidemenu('rectangleMenu');">

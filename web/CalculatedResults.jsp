@@ -13,12 +13,18 @@
         <link rel="stylesheet" type="text/css" href="CSS/cssResources.css">
     </head>
     <body>
-
-        <%
-            Object obj = request.getAttribute("result");
-            double area = (Double)obj;
-            out.println("<h3>Calculated Results</h3><br />");
-            out.println("<p class='one'>" + area + "</p>");
-        %>
+        <h3 class="one">
+            <%
+                out.println("Calculated Results<br />");
+            %>
+        </h3>
+        <p class="two">
+            <%
+                Object obj = request.getAttribute("result");
+                double area = (Double) obj;
+                out.println(area);
+            %>
+        </p>
+    </h3>
     </body>
 </html>

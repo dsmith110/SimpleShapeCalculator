@@ -10,6 +10,11 @@
     background: #003366;
     width: 100px;
 }
+
+.button:hover {
+    background:#993300;
+}
+
 div.one {
     position: absolute;
     left: 20px;
@@ -21,15 +26,23 @@ div.two {
     top: 100px;
 }
 
+h3.one {
+    text-align: center;
+}
+
 .h3 {
+    color: #003366;
     position: relative;
-    left: 12px;
+    left: 62px;
 }
 
 p.one {
     padding-left: 70px;
 }
 
+p.two {
+    text-align: center;
+}
 td.menu{
     background: #99CC99;
 }
@@ -56,4 +69,5 @@ a {
 a:hover{
     color:green;
 }
+
 
