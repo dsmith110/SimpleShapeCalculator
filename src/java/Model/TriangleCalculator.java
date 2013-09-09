@@ -11,14 +11,12 @@ public class TriangleCalculator implements Calculator {
         return (height * base) * 1/2;
     }
     
-    @Override
-    public double calcLegs(double side, double hypo) {
+    public static double calcLegs(double side, double hypo) {
         return Math.sqrt((hypo * hypo) - (side * side));
         
     }
     
-    @Override
-    public double calcHypotenuse(double sideA, double sideB) {
+    public static double calcHypotenuse(double sideA, double sideB) {
         double a = sideA * sideA;
         double b = sideB * sideB;
         

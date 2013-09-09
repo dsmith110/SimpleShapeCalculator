@@ -39,7 +39,8 @@ public class CalculatorController extends HttpServlet {
         
         PrintWriter out = response.getWriter();
         
-        double result = ShapeCalculator.calculate(request);
+        ShapeCalculator shape = new ShapeCalculator();
+        double result = shape.calculate(request);
         request.setAttribute(RESULT_STRING, result);
 
         RequestDispatcher view =

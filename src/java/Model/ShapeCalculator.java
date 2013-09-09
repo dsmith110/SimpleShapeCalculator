@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletRequest;
  * @author Dan Smith
  */
 public class ShapeCalculator {
-    private static Calculator calc;
+    private Calculator calc;
     
-    public static double calculate(HttpServletRequest request) {
+    public double calculate(HttpServletRequest request) {
         int shape = Integer.parseInt(request.getParameter("s"));
-        double result;
+//        double result;
         
         switch (shape) {
             case 0: 
@@ -28,25 +28,31 @@ public class ShapeCalculator {
 //                if(request.getParameter("sideC") == null || parseValue(request.getParameter("sideC")) == 0) {
 //                    return calc.calcHypotenuse(parseValue(request.getParameter("sideA")), parseValue(request.getParameter("sideC")));
 //                }
-                if(parseValue(request.getParameter("sideC")) == 0) {
-                    
-                    return calc.calcHypotenuse(parseValue(request.getParameter("sideA")), parseValue(request.getParameter("sideB")));
-                }
+//                TriangleCalculator tri = new TriangleCalculator();
+                
                 /*
-                 * NEED TO ADD LEG CALCULATIONS
+                 * This makes no sense why I have to do it this way
+                 * ------------------------------------------------
+                 * Why do I have to use static methods?
+                 * Why does my calc object not have access to the non-implemented methods?
                  */
+                if(parseValue(request.getParameter("sideC")) == 0 || request.getParameter("sideC").equals("")) {
+                    
+                    return TriangleCalculator.calcHypotenuse(parseValue(request.getParameter("sideA")), parseValue(request.getParameter("sideB")));
+                }
+                
                 if (parseValue(request.getParameter("sideB")) == 0) {
-                    return calc.calcLegs(parseValue(request.getParameter("sideA")), parseValue(request.getParameter("sideC")));
+                    return TriangleCalculator.calcLegs(parseValue(request.getParameter("sideA")), parseValue(request.getParameter("sideC")));
                 }
                 if (parseValue(request.getParameter("sideA")) == 0) {
-                    return calc.calcLegs(parseValue(request.getParameter("sideB")), parseValue(request.getParameter("sideC")));
+                    return TriangleCalculator.calcLegs(parseValue(request.getParameter("sideB")), parseValue(request.getParameter("sideC")));
                 }
             default:
                 return 0;
         }
     }
     
-    public static double parseValue(String val) {
+    public double parseValue(String val) {
         return Double.parseDouble(val.trim());
     }
 }
